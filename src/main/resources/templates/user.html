@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Info</title>
+</head>
+<body>
+<h1>This is page with user information</h1>
+Current time is <span th:text="${serverTime}" />
+<p th:text="${person.id}">id</p>
+<p th:text="${person.name}">name</p>
+<p th:text="${person.mail}">mail</p>
+<p th:text="${person.phoneNumber}">Phone number</p>
+</body>
+</html>
