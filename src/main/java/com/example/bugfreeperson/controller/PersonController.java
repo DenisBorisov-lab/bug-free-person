@@ -33,14 +33,8 @@ public class PersonController {
     @GetMapping("/get/{id}")
     public String getPerson(@PathVariable UUID id, Model model){
         Person person = service.getPerson(id);
-        model.addAttribute("serverTime", String.valueOf(LocalDateTime.now().format(DateTimeFormatter.ISO_LOCAL_TIME)));
+        model.addAttribute("serverTime", LocalDateTime.now().format(DateTimeFormatter.ISO_LOCAL_TIME));
         model.addAttribute("person", person);
         return "user";
     }
-
-    @GetMapping("/get_page")
-    public String getHomePage(Model model){
-        return "index";
-    }
-
 }

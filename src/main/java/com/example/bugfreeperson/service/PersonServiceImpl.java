@@ -13,7 +13,7 @@ import java.util.UUID;
 @Transactional
 public class PersonServiceImpl implements PersonService{
 
-    private PersonRepository repository;
+    private final PersonRepository repository;
 
     @Autowired
     public PersonServiceImpl(PersonRepository repository) {
